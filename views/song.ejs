@@ -1,0 +1,47 @@
+<% include header %>
+  <div class="jumbotron">
+    <h1>This song is for you <div class="btn-group">
+  	<button class="btn btn-default disabled" > Share: </button>
+  	<a class="btn btn-default" target="_blank" href="/song/<%= id %>" title="permalink" rel="this"><i class="fa fa-share fa-lg"></i></a>
+
+
+  <a
+    class="btn btn-default"
+    target="_blank"
+    title="On Facebook"
+    href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fsongs-for.herokuapp.com/song/<%= id %>&t=Url%20Encoded%20Text"
+  >
+    <i class="fa fa-facebook fa-lg fb"></i>
+  </a>
+
+  <a
+    class="btn btn-default"
+    target="_blank"
+    title="On Twitter"
+    href="http://twitter.com/share?url=http%3A%2F%2Fsongs-for.herokuapp.com/song/<%= id %>&text=<%= title %>"
+  >
+    <i class="fa fa-twitter fa-lg tw"></i>
+  </a>
+
+  <a
+    class="btn btn-default"
+    target="_blank"
+    title="On Google Plus"
+    href="https://plusone.google.com/_/+1/confirm?hl=en&url=http%3A%2F%2Fsongs-for.herokuapp.com/song/<%= id %>"
+  >
+    <i class="fa fa-google-plus fa-lg google"></i>
+  </a>
+
+</div></h1>
+
+<div class="row">
+    <iframe width="100%" height="315" src="//www.youtube.com/embed/<%= u %>" frameborder="0" allowfullscreen></iframe>
+    <br>
+     <a type="button" class="btn btn-info" id="randagain" rel="<%= c %>" href="#">Give me another "<%= c %>" song</a> 
+	<div class="fb-like" data-href="https://songs-for.herokuapp.com/song/<%= id %>" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+
+</div>
+<div class="clearfix clear"></div> 
+ 
+
+<% include footer %>

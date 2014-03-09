@@ -1,0 +1,13 @@
+{
+  "name": "yalan",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "redis" : "*",
+    "express": "3.1.0",
+    "ejs": "*"
+  }
+}
