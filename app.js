@@ -40,11 +40,15 @@ app.get('/lie/:id', function(req,res){
 });
 
 app.get('/rand',function(req,res){
-	console.log("getting lie");
   	client.srandmember("lies", function (err, lie) {
-		console.log("lie from "+process.env.REDISCLOUD_URL)
 		res.render('rand',{"lie":lie, "title":lie});	
 	});
+});
+
+app.get('/json',function(req,res){
+	client.srandmember("lies", function (err, lie) {
+             res.json({"lie":lie});
+        })
 });
 
 http.createServer(app).listen(app.get('port'), function(){
