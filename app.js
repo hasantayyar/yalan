@@ -4,7 +4,7 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
 var redis = require("redis"),
-        client = redis.createClient();
+        client = redis.createClient(process.env.REDISCLOUD_URL);
 
 client.on("error", function (err) {
         console.log("Error " + err);
