@@ -3,7 +3,7 @@ var express = require('express')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path')
-  , url = require(url);
+  , url = require('url');
 var redis = require("redis");
 
 var redisURL = url.parse(process.env.REDISCLOUD_URL);
