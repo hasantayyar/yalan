@@ -36,7 +36,9 @@ app.get('/lie/:id', function(req,res){
 });
 
 app.get('/rand',function(req,res){
-  	client.srandmember("lies", function (err, res) { console.log(res);});
+  	client.srandmember("lies", function (err, res) {
+		res.render('rand',{"lie":res});	
+	});
 });
 
 http.createServer(app).listen(app.get('port'), function(){
