@@ -37,7 +37,7 @@ app.get('/lie/:id', function(req,res){
 
 app.get('/rand',function(req,res){
   	client.srandmember("lies", function (err, lie) {
-		res.render('rand',{"lie":lie});	
+		res.render('rand',{"lie":lie, "title":lie});	
 	});
 });
 
