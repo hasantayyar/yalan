@@ -7,7 +7,7 @@ var redis = require("redis"),
         client = redis.createClient(process.env.REDISCLOUD_URL);
 
 client.on("error", function (err) {
-        console.log("Error " + err);
+        console.log("REDIS ERROR " + err);
 });
 
 
@@ -36,7 +36,9 @@ app.get('/lie/:id', function(req,res){
 });
 
 app.get('/rand',function(req,res){
+	console.log("getting lie");
   	client.srandmember("lies", function (err, lie) {
+		console.log("lie from "+process.env.REDISCLOUD_URL)
 		res.render('rand',{"lie":lie, "title":lie});	
 	});
 });
