@@ -3,6 +3,8 @@
 
 ##yalan üreteci
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hasantayyar/yalan.svg)](https://greenkeeper.io/)
+
 ```
 $ curl http://yalan.herokuapp.com/json
 
